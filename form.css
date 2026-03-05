@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-color: #f2f4f7;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+}
+
+/* HEADER VIDEO */
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: rgb(68, 121, 170);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+}
+
+nav ul li a {
+    color: rgb(247, 244, 244);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: 0.5s;
+    transform: matrix3d(300px);
+    cursor: pointer;
+    transition: 0.5sc;
+}
+
+nav ul li a:hover {
+    background-color: rgb(54, 103, 236);
+    transform: translate.5sc(2px);
+    transform-origin: right;
+    transform: translate3d(2px);
+    box-shadow: 3px 1px 2px rgb(95, 90, 90);
+}
+
+/* SECTIONS (CARD STYLE) */
+section {
+    max-width: 900px;
+    background-color: white;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADINGS */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(68, 121, 170);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(68, 121, 170);
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Mobile phones (up to 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        /* Stack logo and title vertically */
+        text-align: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        /* Smaller title */
+    }
+
+    span {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .logo {
+        width: 80px;
+        /* Smaller logo */
+        margin: 0 auto;
+    }
+
+    .location {
+        position: static;
+        /* Remove absolute positioning */
+        margin: 10px auto;
+        transform: none;
+    }
+
+    .conn_1 ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .conn ul.wow {
+        flex-direction: column;
+        /* Stack nav links */
+        gap: 10px;
+    }
+
+    .conn ul.wow li a {
+        font-size: 18px;
+    }
+
+    body {
+        padding-top: 350px;
+        /* More space for taller mobile nav */
+    }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .location {
+        right: 10px;
+    }
+
+    body {
+        padding-top: 250px;
+    }
+}
+
+/* Large screens (901px and above) - your current styles */
+@media (min-width: 901px) {
+    /* Your existing styles work here */
+}
